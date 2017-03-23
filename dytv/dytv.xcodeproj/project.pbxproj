@@ -13,6 +13,13 @@
 		43E31BBB1E8383D800C8983C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E31BB91E8383D800C8983C /* LaunchScreen.storyboard */; };
 		43E31BC61E8383D800C8983C /* dytvTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E31BC51E8383D800C8983C /* dytvTests.swift */; };
 		43E31BD11E8383D800C8983C /* dytvUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E31BD01E8383D800C8983C /* dytvUITests.swift */; };
+		43E31BF01E83BB4B00C8983C /* home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E31BEF1E83BB4B00C8983C /* home.storyboard */; };
+		43E31BF31E83BB6000C8983C /* live.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E31BF11E83BB6000C8983C /* live.storyboard */; };
+		43E31BF51E83BB7900C8983C /* follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E31BF41E83BB7900C8983C /* follow.storyboard */; };
+		43E31BF81E83BB8C00C8983C /* profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E31BF61E83BB8C00C8983C /* profile.storyboard */; };
+		43E31BFA1E83BCB400C8983C /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E31BF91E83BCB400C8983C /* mainViewController.swift */; };
+		43E31C0D1E83C38D00C8983C /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E31C0C1E83C38D00C8983C /* homeViewController.swift */; };
+		43E31C101E83C78E00C8983C /* uibarbuttonitem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E31C0F1E83C78E00C8983C /* uibarbuttonitem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +52,13 @@
 		43E31BCC1E8383D800C8983C /* dytvUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dytvUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43E31BD01E8383D800C8983C /* dytvUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dytvUITests.swift; sourceTree = "<group>"; };
 		43E31BD21E8383D800C8983C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43E31BEF1E83BB4B00C8983C /* home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = home.storyboard; sourceTree = "<group>"; };
+		43E31BF21E83BB6000C8983C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/live.storyboard; sourceTree = "<group>"; };
+		43E31BF41E83BB7900C8983C /* follow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = follow.storyboard; sourceTree = "<group>"; };
+		43E31BF71E83BB8C00C8983C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/profile.storyboard; sourceTree = "<group>"; };
+		43E31BF91E83BCB400C8983C /* mainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
+		43E31C0C1E83C38D00C8983C /* homeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
+		43E31C0F1E83C78E00C8983C /* uibarbuttonitem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = uibarbuttonitem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +111,6 @@
 			children = (
 				43E31BDE1E838F6E00C8983C /* class */,
 				43E31BB01E8383D800C8983C /* AppDelegate.swift */,
-				43E31BB41E8383D800C8983C /* Main.storyboard */,
 				43E31BB71E8383D800C8983C /* Assets.xcassets */,
 				43E31BB91E8383D800C8983C /* LaunchScreen.storyboard */,
 				43E31BBC1E8383D800C8983C /* Info.plist */,
@@ -139,6 +152,9 @@
 		43E31BDF1E838F8800C8983C /* profile */ = {
 			isa = PBXGroup;
 			children = (
+				43E31C0B1E83C30D00C8983C /* model */,
+				43E31C0A1E83C30500C8983C /* view */,
+				43E31C091E83C2FD00C8983C /* controller */,
 			);
 			name = profile;
 			sourceTree = "<group>";
@@ -146,6 +162,9 @@
 		43E31BE01E838F9200C8983C /* home */ = {
 			isa = PBXGroup;
 			children = (
+				43E31BFB1E83C22A00C8983C /* model */,
+				43E31BFE1E83C25300C8983C /* view */,
+				43E31BFF1E83C25C00C8983C /* controller */,
 			);
 			name = home;
 			sourceTree = "<group>";
@@ -153,6 +172,9 @@
 		43E31BE11E838F9800C8983C /* live */ = {
 			isa = PBXGroup;
 			children = (
+				43E31C031E83C2C500C8983C /* model */,
+				43E31C041E83C2CD00C8983C /* view */,
+				43E31C051E83C2D400C8983C /* controller */,
 			);
 			name = live;
 			sourceTree = "<group>";
@@ -160,6 +182,9 @@
 		43E31BE21E838FA400C8983C /* main */ = {
 			isa = PBXGroup;
 			children = (
+				43E31C001E83C29500C8983C /* model */,
+				43E31C011E83C29C00C8983C /* view */,
+				43E31C021E83C2A200C8983C /* controller */,
 			);
 			name = main;
 			sourceTree = "<group>";
@@ -167,6 +192,9 @@
 		43E31BE31E838FAF00C8983C /* follow */ = {
 			isa = PBXGroup;
 			children = (
+				43E31C081E83C2F600C8983C /* model */,
+				43E31C071E83C2F100C8983C /* view */,
+				43E31C061E83C2E900C8983C /* controller */,
 			);
 			name = follow;
 			sourceTree = "<group>";
@@ -174,8 +202,129 @@
 		43E31BE41E838FBF00C8983C /* tools */ = {
 			isa = PBXGroup;
 			children = (
+				43E31C0E1E83C76F00C8983C /* extension */,
 			);
 			name = tools;
+			sourceTree = "<group>";
+		};
+		43E31BFB1E83C22A00C8983C /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		43E31BFE1E83C25300C8983C /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		43E31BFF1E83C25C00C8983C /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				43E31BEF1E83BB4B00C8983C /* home.storyboard */,
+				43E31C0C1E83C38D00C8983C /* homeViewController.swift */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		43E31C001E83C29500C8983C /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		43E31C011E83C29C00C8983C /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		43E31C021E83C2A200C8983C /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				43E31BB41E8383D800C8983C /* Main.storyboard */,
+				43E31BF91E83BCB400C8983C /* mainViewController.swift */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		43E31C031E83C2C500C8983C /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		43E31C041E83C2CD00C8983C /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		43E31C051E83C2D400C8983C /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				43E31BF11E83BB6000C8983C /* live.storyboard */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		43E31C061E83C2E900C8983C /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				43E31BF41E83BB7900C8983C /* follow.storyboard */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		43E31C071E83C2F100C8983C /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		43E31C081E83C2F600C8983C /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		43E31C091E83C2FD00C8983C /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				43E31BF61E83BB8C00C8983C /* profile.storyboard */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		43E31C0A1E83C30500C8983C /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		43E31C0B1E83C30D00C8983C /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		43E31C0E1E83C76F00C8983C /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				43E31C0F1E83C78E00C8983C /* uibarbuttonitem.swift */,
+			);
+			name = extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,9 +437,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43E31BF81E83BB8C00C8983C /* profile.storyboard in Resources */,
 				43E31BBB1E8383D800C8983C /* LaunchScreen.storyboard in Resources */,
 				43E31BB81E8383D800C8983C /* Assets.xcassets in Resources */,
+				43E31BF31E83BB6000C8983C /* live.storyboard in Resources */,
+				43E31BF51E83BB7900C8983C /* follow.storyboard in Resources */,
 				43E31BB61E8383D800C8983C /* Main.storyboard in Resources */,
+				43E31BF01E83BB4B00C8983C /* home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +469,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				43E31BB11E8383D800C8983C /* AppDelegate.swift in Sources */,
+				43E31C0D1E83C38D00C8983C /* homeViewController.swift in Sources */,
+				43E31C101E83C78E00C8983C /* uibarbuttonitem.swift in Sources */,
+				43E31BFA1E83BCB400C8983C /* mainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +521,22 @@
 				43E31BBA1E8383D800C8983C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		43E31BF11E83BB6000C8983C /* live.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43E31BF21E83BB6000C8983C /* Base */,
+			);
+			name = live.storyboard;
+			sourceTree = "<group>";
+		};
+		43E31BF61E83BB8C00C8983C /* profile.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43E31BF71E83BB8C00C8983C /* Base */,
+			);
+			name = profile.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -468,7 +640,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = U955FM7S6Y;
 				INFOPLIST_FILE = dytv/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-23.dytv";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -483,7 +655,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = U955FM7S6Y;
 				INFOPLIST_FILE = dytv/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-23.dytv";
 				PRODUCT_NAME = "$(TARGET_NAME)";
