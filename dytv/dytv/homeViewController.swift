@@ -9,6 +9,15 @@
 import UIKit
 
 class homeViewController: UIViewController {
+    
+    fileprivate lazy var pagetitlevieww:pagetitleview = {
+        let titleframe = CGRect(x: 0, y: kstatusbarh + knavigationh, width: kscreenw, height: 40)
+        let titles = ["推荐","游戏","娱乐","趣玩",]
+        
+        let titleview = pagetitleview(frame: titleframe, titles: titles)
+        titleview.backgroundColor = UIColor.white
+        return titleview
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +33,12 @@ class homeViewController: UIViewController {
 //设置ui界面
 extension homeViewController{
     fileprivate func setupui(){
+        automaticallyAdjustsScrollViewInsets = false
         //1. 设置导航栏
         setnavigationbar()
+        //2.添加titleview
+        view.addSubview(pagetitlevieww)
+        
     }
     
     private func setnavigationbar(){
@@ -33,6 +46,7 @@ extension homeViewController{
         //设置左侧的item
         let btn = UIButton()
         btn.setImage(UIImage(named:"logo"), for: .normal)
+        btn.sizeToFit()
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: btn)
         //设置右侧的item
         let searchitem = UIBarButtonItem.creatitem(imagename: "btn_search", hightimagename: "btn_search_clicked", size:size)

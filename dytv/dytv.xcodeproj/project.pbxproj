@@ -20,6 +20,8 @@
 		43E31BFA1E83BCB400C8983C /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E31BF91E83BCB400C8983C /* mainViewController.swift */; };
 		43E31C0D1E83C38D00C8983C /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E31C0C1E83C38D00C8983C /* homeViewController.swift */; };
 		43E31C101E83C78E00C8983C /* uibarbuttonitem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E31C0F1E83C78E00C8983C /* uibarbuttonitem.swift */; };
+		96B7DFE51E8402B3009F35AE /* pagetitleview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B7DFE41E8402B3009F35AE /* pagetitleview.swift */; };
+		96B7DFE71E84050C009F35AE /* common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B7DFE61E84050C009F35AE /* common.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		43E31BF91E83BCB400C8983C /* mainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
 		43E31C0C1E83C38D00C8983C /* homeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
 		43E31C0F1E83C78E00C8983C /* uibarbuttonitem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = uibarbuttonitem.swift; sourceTree = "<group>"; };
+		96B7DFE41E8402B3009F35AE /* pagetitleview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pagetitleview.swift; sourceTree = "<group>"; };
+		96B7DFE61E84050C009F35AE /* common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = common.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				43E31C0E1E83C76F00C8983C /* extension */,
+				96B7DFE61E84050C009F35AE /* common.swift */,
 			);
 			name = tools;
 			sourceTree = "<group>";
@@ -240,6 +245,7 @@
 		43E31C011E83C29C00C8983C /* view */ = {
 			isa = PBXGroup;
 			children = (
+				96B7DFE41E8402B3009F35AE /* pagetitleview.swift */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -470,6 +476,8 @@
 			files = (
 				43E31BB11E8383D800C8983C /* AppDelegate.swift in Sources */,
 				43E31C0D1E83C38D00C8983C /* homeViewController.swift in Sources */,
+				96B7DFE71E84050C009F35AE /* common.swift in Sources */,
+				96B7DFE51E8402B3009F35AE /* pagetitleview.swift in Sources */,
 				43E31C101E83C78E00C8983C /* uibarbuttonitem.swift in Sources */,
 				43E31BFA1E83BCB400C8983C /* mainViewController.swift in Sources */,
 			);
@@ -670,6 +678,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = U955FM7S6Y;
 				INFOPLIST_FILE = dytvTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-23.dytvTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -685,6 +694,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = U955FM7S6Y;
 				INFOPLIST_FILE = dytvTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-23.dytvTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -699,6 +709,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = U955FM7S6Y;
 				INFOPLIST_FILE = dytvUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-23.dytvUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -713,6 +724,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = U955FM7S6Y;
 				INFOPLIST_FILE = dytvUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-23.dytvUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
