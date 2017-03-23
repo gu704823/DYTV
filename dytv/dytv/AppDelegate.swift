@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  dytv
+//  dy/Users/airbook/Desktop/dytv/dytv/dytv.xcodeprojtv
 //
 //  Created by jason on 2017/3/23.
 //  Copyright © 2017年 jason. All rights reserved.
