@@ -9,7 +9,7 @@
 import UIKit
 
 class pagetitleview: UIView {
-    
+    fileprivate var titles:[String]
     init(frame: CGRect,titles:[String]) {
         self.titles = titles
         super.init(frame: frame)
@@ -22,7 +22,7 @@ class pagetitleview: UIView {
     }
 
     
-    fileprivate var titles:[String]
+    
     fileprivate lazy var labeltitles = [UILabel]()
     //设置scrollview
     fileprivate lazy var scrollview:UIScrollView = {
@@ -76,6 +76,11 @@ extension pagetitleview{
             
             scrollview.addSubview(label)
             labeltitles.append(label)
+            
+            //给label添加手势
+            label.isUserInteractionEnabled = true
+            let tapges = UITapGestureRecognizer(target: self, action: #selector(self.titlelabelclick(tap:)))
+            label.addGestureRecognizer(tapges)
         }
     }
     fileprivate func bottomlineandscrollline(){
@@ -96,6 +101,11 @@ extension pagetitleview{
         scrollview.addSubview(scrollline)
         
         
+    }
+}
+extension pagetitleview{
+    @objc fileprivate func titlelabelclick(tap:UITapGestureRecognizer){
+        print("---")
     }
 }
 

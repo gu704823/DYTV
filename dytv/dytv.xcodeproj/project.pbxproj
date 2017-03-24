@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		436CA9DF1E84A67B000E3892 /* pagecontentview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436CA9DE1E84A67B000E3892 /* pagecontentview.swift */; };
+		436CA9E11E84B9B7000E3892 /* uicolor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436CA9E01E84B9B7000E3892 /* uicolor.swift */; };
 		43E31BB11E8383D800C8983C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E31BB01E8383D800C8983C /* AppDelegate.swift */; };
 		43E31BB61E8383D800C8983C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E31BB41E8383D800C8983C /* Main.storyboard */; };
 		43E31BB81E8383D800C8983C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43E31BB71E8383D800C8983C /* Assets.xcassets */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		436CA9DE1E84A67B000E3892 /* pagecontentview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pagecontentview.swift; sourceTree = "<group>"; };
+		436CA9E01E84B9B7000E3892 /* uicolor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = uicolor.swift; sourceTree = "<group>"; };
 		43E31BAD1E8383D800C8983C /* dytv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dytv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43E31BB01E8383D800C8983C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43E31BB51E8383D800C8983C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -246,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				96B7DFE41E8402B3009F35AE /* pagetitleview.swift */,
+				436CA9DE1E84A67B000E3892 /* pagecontentview.swift */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -329,6 +334,7 @@
 			isa = PBXGroup;
 			children = (
 				43E31C0F1E83C78E00C8983C /* uibarbuttonitem.swift */,
+				436CA9E01E84B9B7000E3892 /* uicolor.swift */,
 			);
 			name = extension;
 			sourceTree = "<group>";
@@ -479,7 +485,9 @@
 				96B7DFE71E84050C009F35AE /* common.swift in Sources */,
 				96B7DFE51E8402B3009F35AE /* pagetitleview.swift in Sources */,
 				43E31C101E83C78E00C8983C /* uibarbuttonitem.swift in Sources */,
+				436CA9E11E84B9B7000E3892 /* uicolor.swift in Sources */,
 				43E31BFA1E83BCB400C8983C /* mainViewController.swift in Sources */,
+				436CA9DF1E84A67B000E3892 /* pagecontentview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
