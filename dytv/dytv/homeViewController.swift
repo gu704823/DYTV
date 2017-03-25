@@ -16,6 +16,8 @@ class homeViewController: UIViewController {
         
         let titleview = pagetitleview(frame: titleframe, titles: titles)
         titleview.backgroundColor = UIColor.white
+        //遵循pagetitleview的代理
+        titleview.delegate = self
         return titleview
     }()
     
@@ -31,6 +33,8 @@ class homeViewController: UIViewController {
         }
         
        let contenview = pagecontentview(frame: contentviewframe, childcontrollers: childvcs, parentcontrolller: self!)
+        //遵循代理
+       
         return contenview
     }()
 
@@ -71,5 +75,11 @@ extension homeViewController{
         let qrcodeitem = UIBarButtonItem.creatitem(imagename: "Image_scan", hightimagename: "Image_scan_click", size:size)
 
         navigationItem.rightBarButtonItems = [searchitem,historyitem,qrcodeitem]
+    }
+}
+//遵循代理
+extension homeViewController:pagetitleviewdelegate{
+    func Pagetitleview(titleview: pagetitleview, selectindex index: Int) {
+        pagecontentvieww.setcurrentindex(currentindex: index)
     }
 }
