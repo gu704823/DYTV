@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B70EA66AEC19036D19BF58B /* Pods_dytv.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CED088ACB8FADA1CF06B20D /* Pods_dytv.framework */; };
 		436CA9DF1E84A67B000E3892 /* pagecontentview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436CA9DE1E84A67B000E3892 /* pagecontentview.swift */; };
 		436CA9E11E84B9B7000E3892 /* uicolor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436CA9E01E84B9B7000E3892 /* uicolor.swift */; };
 		43E31BB11E8383D800C8983C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E31BB01E8383D800C8983C /* AppDelegate.swift */; };
@@ -22,8 +23,16 @@
 		43E31BFA1E83BCB400C8983C /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E31BF91E83BCB400C8983C /* mainViewController.swift */; };
 		43E31C0D1E83C38D00C8983C /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E31C0C1E83C38D00C8983C /* homeViewController.swift */; };
 		43E31C101E83C78E00C8983C /* uibarbuttonitem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E31C0F1E83C78E00C8983C /* uibarbuttonitem.swift */; };
+		960C35D21E8749DE00EE3DE4 /* CollectionheaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960C35D01E8749DE00EE3DE4 /* CollectionheaderView.swift */; };
+		960C35D31E8749DE00EE3DE4 /* CollectionheaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 960C35D11E8749DE00EE3DE4 /* CollectionheaderView.xib */; };
+		960C35D81E874E7800EE3DE4 /* collectionnormalcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960C35D61E874E7800EE3DE4 /* collectionnormalcell.swift */; };
+		960C35D91E874E7800EE3DE4 /* collectionnormalcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 960C35D71E874E7800EE3DE4 /* collectionnormalcell.xib */; };
+		960C35DC1E87566E00EE3DE4 /* CollectionprettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960C35DA1E87566E00EE3DE4 /* CollectionprettyCell.swift */; };
+		960C35DD1E87566E00EE3DE4 /* CollectionprettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 960C35DB1E87566E00EE3DE4 /* CollectionprettyCell.xib */; };
 		96B7DFE51E8402B3009F35AE /* pagetitleview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B7DFE41E8402B3009F35AE /* pagetitleview.swift */; };
 		96B7DFE71E84050C009F35AE /* common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B7DFE61E84050C009F35AE /* common.swift */; };
+		96E7EBC71E86973C002B9A92 /* liveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E7EBC61E86973C002B9A92 /* liveViewController.swift */; };
+		96E7EBC91E869BC6002B9A92 /* recommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E7EBC81E869BC6002B9A92 /* recommendViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		29044FA3AAD8AD54CAAE27C7 /* Pods-dytv.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dytv.release.xcconfig"; path = "Pods/Target Support Files/Pods-dytv/Pods-dytv.release.xcconfig"; sourceTree = "<group>"; };
 		436CA9DE1E84A67B000E3892 /* pagecontentview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pagecontentview.swift; sourceTree = "<group>"; };
 		436CA9E01E84B9B7000E3892 /* uicolor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = uicolor.swift; sourceTree = "<group>"; };
 		43E31BAD1E8383D800C8983C /* dytv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dytv.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,8 +75,18 @@
 		43E31BF91E83BCB400C8983C /* mainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
 		43E31C0C1E83C38D00C8983C /* homeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
 		43E31C0F1E83C78E00C8983C /* uibarbuttonitem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = uibarbuttonitem.swift; sourceTree = "<group>"; };
+		883911C28C4BEC0E455738D3 /* Pods-dytv.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dytv.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dytv/Pods-dytv.debug.xcconfig"; sourceTree = "<group>"; };
+		8CED088ACB8FADA1CF06B20D /* Pods_dytv.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dytv.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		960C35D01E8749DE00EE3DE4 /* CollectionheaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionheaderView.swift; sourceTree = "<group>"; };
+		960C35D11E8749DE00EE3DE4 /* CollectionheaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionheaderView.xib; sourceTree = "<group>"; };
+		960C35D61E874E7800EE3DE4 /* collectionnormalcell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = collectionnormalcell.swift; sourceTree = "<group>"; };
+		960C35D71E874E7800EE3DE4 /* collectionnormalcell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = collectionnormalcell.xib; sourceTree = "<group>"; };
+		960C35DA1E87566E00EE3DE4 /* CollectionprettyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionprettyCell.swift; sourceTree = "<group>"; };
+		960C35DB1E87566E00EE3DE4 /* CollectionprettyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionprettyCell.xib; sourceTree = "<group>"; };
 		96B7DFE41E8402B3009F35AE /* pagetitleview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pagetitleview.swift; sourceTree = "<group>"; };
 		96B7DFE61E84050C009F35AE /* common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = common.swift; sourceTree = "<group>"; };
+		96E7EBC61E86973C002B9A92 /* liveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = liveViewController.swift; sourceTree = "<group>"; };
+		96E7EBC81E869BC6002B9A92 /* recommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = recommendViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B70EA66AEC19036D19BF58B /* Pods_dytv.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +122,8 @@
 				43E31BC41E8383D800C8983C /* dytvTests */,
 				43E31BCF1E8383D800C8983C /* dytvUITests */,
 				43E31BAE1E8383D800C8983C /* Products */,
+				82C12C52B8999ABEB6BA6FDE /* Pods */,
+				C02A9F7CE795624A5E2EA73A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -226,6 +249,8 @@
 		43E31BFE1E83C25300C8983C /* view */ = {
 			isa = PBXGroup;
 			children = (
+				960C35D01E8749DE00EE3DE4 /* CollectionheaderView.swift */,
+				960C35D11E8749DE00EE3DE4 /* CollectionheaderView.xib */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -235,6 +260,7 @@
 			children = (
 				43E31BEF1E83BB4B00C8983C /* home.storyboard */,
 				43E31C0C1E83C38D00C8983C /* homeViewController.swift */,
+				96E7EBC81E869BC6002B9A92 /* recommendViewController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -251,6 +277,10 @@
 			children = (
 				96B7DFE41E8402B3009F35AE /* pagetitleview.swift */,
 				436CA9DE1E84A67B000E3892 /* pagecontentview.swift */,
+				960C35D61E874E7800EE3DE4 /* collectionnormalcell.swift */,
+				960C35D71E874E7800EE3DE4 /* collectionnormalcell.xib */,
+				960C35DA1E87566E00EE3DE4 /* CollectionprettyCell.swift */,
+				960C35DB1E87566E00EE3DE4 /* CollectionprettyCell.xib */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -282,6 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				43E31BF11E83BB6000C8983C /* live.storyboard */,
+				96E7EBC61E86973C002B9A92 /* liveViewController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -339,6 +370,23 @@
 			name = extension;
 			sourceTree = "<group>";
 		};
+		82C12C52B8999ABEB6BA6FDE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				883911C28C4BEC0E455738D3 /* Pods-dytv.debug.xcconfig */,
+				29044FA3AAD8AD54CAAE27C7 /* Pods-dytv.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C02A9F7CE795624A5E2EA73A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8CED088ACB8FADA1CF06B20D /* Pods_dytv.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -346,9 +394,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 43E31BD51E8383D800C8983C /* Build configuration list for PBXNativeTarget "dytv" */;
 			buildPhases = (
+				25C20A67E729A72DBB458C61 /* [CP] Check Pods Manifest.lock */,
 				43E31BA91E8383D800C8983C /* Sources */,
 				43E31BAA1E8383D800C8983C /* Frameworks */,
 				43E31BAB1E8383D800C8983C /* Resources */,
+				691E492898550BA29DA3D60F /* [CP] Embed Pods Frameworks */,
+				AD1455D0F63C74064AB7CD3C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -450,9 +501,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				43E31BF81E83BB8C00C8983C /* profile.storyboard in Resources */,
+				960C35D31E8749DE00EE3DE4 /* CollectionheaderView.xib in Resources */,
 				43E31BBB1E8383D800C8983C /* LaunchScreen.storyboard in Resources */,
+				960C35DD1E87566E00EE3DE4 /* CollectionprettyCell.xib in Resources */,
 				43E31BB81E8383D800C8983C /* Assets.xcassets in Resources */,
 				43E31BF31E83BB6000C8983C /* live.storyboard in Resources */,
+				960C35D91E874E7800EE3DE4 /* collectionnormalcell.xib in Resources */,
 				43E31BF51E83BB7900C8983C /* follow.storyboard in Resources */,
 				43E31BB61E8383D800C8983C /* Main.storyboard in Resources */,
 				43E31BF01E83BB4B00C8983C /* home.storyboard in Resources */,
@@ -475,19 +529,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		25C20A67E729A72DBB458C61 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		691E492898550BA29DA3D60F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-dytv/Pods-dytv-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD1455D0F63C74064AB7CD3C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-dytv/Pods-dytv-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		43E31BA91E8383D800C8983C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				43E31BB11E8383D800C8983C /* AppDelegate.swift in Sources */,
+				960C35D21E8749DE00EE3DE4 /* CollectionheaderView.swift in Sources */,
 				43E31C0D1E83C38D00C8983C /* homeViewController.swift in Sources */,
 				96B7DFE71E84050C009F35AE /* common.swift in Sources */,
+				96E7EBC71E86973C002B9A92 /* liveViewController.swift in Sources */,
 				96B7DFE51E8402B3009F35AE /* pagetitleview.swift in Sources */,
+				96E7EBC91E869BC6002B9A92 /* recommendViewController.swift in Sources */,
 				43E31C101E83C78E00C8983C /* uibarbuttonitem.swift in Sources */,
 				436CA9E11E84B9B7000E3892 /* uicolor.swift in Sources */,
 				43E31BFA1E83BCB400C8983C /* mainViewController.swift in Sources */,
+				960C35D81E874E7800EE3DE4 /* collectionnormalcell.swift in Sources */,
 				436CA9DF1E84A67B000E3892 /* pagecontentview.swift in Sources */,
+				960C35DC1E87566E00EE3DE4 /* CollectionprettyCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -651,6 +758,7 @@
 		};
 		43E31BD61E8383D800C8983C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 883911C28C4BEC0E455738D3 /* Pods-dytv.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -666,6 +774,7 @@
 		};
 		43E31BD71E8383D800C8983C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29044FA3AAD8AD54CAAE27C7 /* Pods-dytv.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

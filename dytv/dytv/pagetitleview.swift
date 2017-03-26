@@ -131,4 +131,23 @@ extension pagetitleview{
         
     }
 }
+//对外暴漏方法,允许调用
+extension pagetitleview{
+    func settitlewithprogress(progress:CGFloat,sourceindex:Int,targetindex:Int){
+        //取出sourcelabel和targetlabel
+        let sourcelabel = labeltitles[sourceindex]
+        let targetlabel = labeltitles[targetindex]
+        //处理滑块的逻辑
+        let movetotalx = targetlabel.frame.origin.x - sourcelabel.frame.origin.x
+        let movex = movetotalx * progress
+        scrollline.frame.origin.x = sourcelabel.frame.origin.x + movex
+        //处理labeltext颜色逻辑
+        
+        sourcelabel.textColor = UIColor.darkGray
+        targetlabel.textColor = UIColor.orange
+        //记录最新的index
+        currentindex = targetindex
+        
+    }
+}
 

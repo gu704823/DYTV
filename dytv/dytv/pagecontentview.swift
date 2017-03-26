@@ -17,6 +17,7 @@ class pagecontentview: UIView {
     fileprivate var startoffsetx:CGFloat = 0
     weak var delegate:pagecontentviewdelegate?
     
+    var isforbidscrolldelegate:Bool = false
 
     init(frame:CGRect,childcontrollers:[UIViewController],parentcontrolller:UIViewController?){
         self.childviewcontrollers = childcontrollers
@@ -87,9 +88,13 @@ extension pagecontentview:UICollectionViewDataSource{
 extension pagecontentview:UICollectionViewDelegate{
     
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        //在未滑动之前重新把isforbidscrolldelegate赋值为false
+        isforbidscrolldelegate = false
         startoffsetx = scrollView.contentOffset.x
     }
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        //判断是点击还是滑动,如果是true则不执行scrollViewDidScroll这个方法,直接return
+        if isforbidscrolldelegate {return}
         //定义需要的数据
         var progress:CGFloat = 0
         var sourceindex:Int = 0
@@ -123,7 +128,7 @@ extension pagecontentview:UICollectionViewDelegate{
             targetindex = Int(currentoffsetx/scrollvieww)
             //3.计算sourceindex
             sourceindex = targetindex + 1
-            if sourceindex>childviewcontrollers.count{
+            if sourceindex>=childviewcontrollers.count{
                 sourceindex = childviewcontrollers.count - 1
             }
         }
@@ -134,6 +139,8 @@ extension pagecontentview:UICollectionViewDelegate{
 //对外暴露的方法,允许调用
 extension pagecontentview{
     func setcurrentindex(currentindex:Int){
+        //如果是点击,isforbidscrolldelegate为true
+        isforbidscrolldelegate = true
         let offsetx = CGFloat(currentindex) * collectionview.frame.width
         collectionview.setContentOffset(CGPoint(x:offsetx,y:0), animated: true)
     }
