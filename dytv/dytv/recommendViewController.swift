@@ -24,9 +24,12 @@ class recommendViewController: UIViewController {
         super.viewDidLoad()
       //1.设置ui
         setupui()
+      //2.发送网络请求
+        loaddata()
         
     }
     //懒加载collectionview
+    fileprivate lazy var recommendvm:recommendviewmodel = recommendviewmodel()
     fileprivate lazy var collectionvieww:UICollectionView = {
       //1.创建布局
         let layout = UICollectionViewFlowLayout()
@@ -59,11 +62,17 @@ extension recommendViewController{
     fileprivate func setupui(){
        //1.将collectionview添加到view中
         view.addSubview(collectionvieww)
-        
        
+        }
+    }
+//发送网络请求
+extension recommendViewController{
+        fileprivate func loaddata(){
+          recommendvm.requestdata()
+        }
     }
     
-}
+
 //遵守数据源协议UICollectionViewDataSource
 extension recommendViewController:UICollectionViewDataSource{
     func numberOfSections(in collectionView: UICollectionView) -> Int {

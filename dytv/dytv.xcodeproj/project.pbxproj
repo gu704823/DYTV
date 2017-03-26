@@ -29,6 +29,8 @@
 		960C35D91E874E7800EE3DE4 /* collectionnormalcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 960C35D71E874E7800EE3DE4 /* collectionnormalcell.xib */; };
 		960C35DC1E87566E00EE3DE4 /* CollectionprettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960C35DA1E87566E00EE3DE4 /* CollectionprettyCell.swift */; };
 		960C35DD1E87566E00EE3DE4 /* CollectionprettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 960C35DB1E87566E00EE3DE4 /* CollectionprettyCell.xib */; };
+		960C35DF1E87E5D800EE3DE4 /* networktools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960C35DE1E87E5D800EE3DE4 /* networktools.swift */; };
+		960C35E21E87F72800EE3DE4 /* recommendviewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960C35E11E87F72800EE3DE4 /* recommendviewmodel.swift */; };
 		96B7DFE51E8402B3009F35AE /* pagetitleview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B7DFE41E8402B3009F35AE /* pagetitleview.swift */; };
 		96B7DFE71E84050C009F35AE /* common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B7DFE61E84050C009F35AE /* common.swift */; };
 		96E7EBC71E86973C002B9A92 /* liveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E7EBC61E86973C002B9A92 /* liveViewController.swift */; };
@@ -83,6 +85,8 @@
 		960C35D71E874E7800EE3DE4 /* collectionnormalcell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = collectionnormalcell.xib; sourceTree = "<group>"; };
 		960C35DA1E87566E00EE3DE4 /* CollectionprettyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionprettyCell.swift; sourceTree = "<group>"; };
 		960C35DB1E87566E00EE3DE4 /* CollectionprettyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionprettyCell.xib; sourceTree = "<group>"; };
+		960C35DE1E87E5D800EE3DE4 /* networktools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = networktools.swift; sourceTree = "<group>"; };
+		960C35E11E87F72800EE3DE4 /* recommendviewmodel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = recommendviewmodel.swift; sourceTree = "<group>"; };
 		96B7DFE41E8402B3009F35AE /* pagetitleview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pagetitleview.swift; sourceTree = "<group>"; };
 		96B7DFE61E84050C009F35AE /* common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = common.swift; sourceTree = "<group>"; };
 		96E7EBC61E86973C002B9A92 /* liveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = liveViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +199,7 @@
 			children = (
 				43E31BFB1E83C22A00C8983C /* model */,
 				43E31BFE1E83C25300C8983C /* view */,
+				960C35E01E87F6F700EE3DE4 /* viewmodel */,
 				43E31BFF1E83C25C00C8983C /* controller */,
 			);
 			name = home;
@@ -235,6 +240,7 @@
 			children = (
 				43E31C0E1E83C76F00C8983C /* extension */,
 				96B7DFE61E84050C009F35AE /* common.swift */,
+				960C35DE1E87E5D800EE3DE4 /* networktools.swift */,
 			);
 			name = tools;
 			sourceTree = "<group>";
@@ -377,6 +383,14 @@
 				29044FA3AAD8AD54CAAE27C7 /* Pods-dytv.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		960C35E01E87F6F700EE3DE4 /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				960C35E11E87F72800EE3DE4 /* recommendviewmodel.swift */,
+			);
+			name = viewmodel;
 			sourceTree = "<group>";
 		};
 		C02A9F7CE795624A5E2EA73A /* Frameworks */ = {
@@ -589,7 +603,9 @@
 				96E7EBC71E86973C002B9A92 /* liveViewController.swift in Sources */,
 				96B7DFE51E8402B3009F35AE /* pagetitleview.swift in Sources */,
 				96E7EBC91E869BC6002B9A92 /* recommendViewController.swift in Sources */,
+				960C35E21E87F72800EE3DE4 /* recommendviewmodel.swift in Sources */,
 				43E31C101E83C78E00C8983C /* uibarbuttonitem.swift in Sources */,
+				960C35DF1E87E5D800EE3DE4 /* networktools.swift in Sources */,
 				436CA9E11E84B9B7000E3892 /* uicolor.swift in Sources */,
 				43E31BFA1E83BCB400C8983C /* mainViewController.swift in Sources */,
 				960C35D81E874E7800EE3DE4 /* collectionnormalcell.swift in Sources */,

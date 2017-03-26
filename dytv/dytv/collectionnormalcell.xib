@@ -48,9 +48,9 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZd-Yy-ZGJ">
-                        <rect key="frame" x="275" y="189" width="91" height="24"/>
+                        <rect key="frame" x="269" y="189" width="97" height="24"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                        <state key="normal" title="10000人在线" image="btn_column_normal"/>
+                        <state key="normal" title="10000人在线" image="btn_live_selected"/>
                     </button>
                 </subviews>
             </view>
@@ -75,7 +75,7 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="btn_column_normal" width="24" height="24"/>
         <image name="btn_column_selected" width="24" height="24"/>
+        <image name="btn_live_selected" width="30" height="24"/>
     </resources>
 </document>
