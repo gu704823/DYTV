@@ -12,7 +12,7 @@ class homeViewController: UIViewController {
     
     fileprivate lazy var pagetitlevieww:pagetitleview = {[weak self] in
         let titleframe = CGRect(x: 0, y: kstatusbarh + knavigationh, width: kscreenw, height: 40)
-        let titles = ["推荐","游戏","娱乐","趣玩",]
+        let titles = ["推荐","手游","游戏","娱乐","趣玩",]
         
         let titleview = pagetitleview(frame: titleframe, titles: titles)
         titleview.backgroundColor = UIColor.white
@@ -73,6 +73,7 @@ extension homeViewController{
         let qrcodeitem = UIBarButtonItem.creatitem(imagename: "Image_scan", hightimagename: "Image_scan_click", size:size)
 
         navigationItem.rightBarButtonItems = [searchitem,historyitem,qrcodeitem]
+        
     }
 }
 //遵循pagetitleviewdelegate代理协议
