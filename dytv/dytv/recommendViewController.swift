@@ -26,7 +26,6 @@ class recommendViewController: UIViewController {
         setupui()
       //2.发送网络请求
         loaddata()
-        
     }
     //懒加载collectionview
     fileprivate lazy var recommendvm:recommendviewmodel = recommendviewmodel()
