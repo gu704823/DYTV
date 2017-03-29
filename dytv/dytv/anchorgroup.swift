@@ -9,9 +9,25 @@
 import UIKit
 
 class anchorgroup: NSObject {
-    var room_list:[[String:NSObject]]?
+    lazy var anchors:[anchormodel] = [anchormodel]()
+    var room_list:[[String:NSObject]]?{
+        didSet{
+            guard let romlist = room_list else{
+                return
+            }
+            for dict in romlist{
+               let data = anchormodel(dict: dict)
+               anchors.append(data)
+            }
+        }
+    }
     var tag_name:String?
     var icon_url:String = ""
+    
+    override init() {
+        
+    }
+    
     init(dict:[String:NSObject]) {
         super.init()
         setValuesForKeys(dict)

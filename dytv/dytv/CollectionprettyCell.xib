@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -47,31 +47,32 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masktoBounds" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10000人在线" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7m-yD-X8r">
-                        <rect key="frame" x="230" y="5" width="80" height="20"/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="0.48354973591549294" colorSpace="calibratedWhite"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZRX-ue-SFT">
+                        <rect key="frame" x="237" y="8" width="70" height="20"/>
+                        <color key="backgroundColor" red="0.47358727331606221" green="0.47358727331606221" blue="0.47358727331606221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="20" id="vHk-5v-v40"/>
-                            <constraint firstAttribute="width" constant="80" id="vqk-Iv-YbZ"/>
+                            <constraint firstAttribute="height" constant="20" id="Tmt-AL-7Ea"/>
+                            <constraint firstAttribute="width" constant="70" id="coV-rW-qXl"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <nil key="highlightedColor"/>
+                        <state key="normal" title="10000人在线">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                <integer key="value" value="2"/>
+                                <integer key="value" value="5"/>
                             </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masktoBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                         </userDefinedRuntimeAttributes>
-                    </label>
+                    </button>
                 </subviews>
             </view>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="ZRX-ue-SFT" secondAttribute="trailing" constant="8" id="10m-pP-7Yd"/>
                 <constraint firstAttribute="trailing" secondItem="IN8-r7-j95" secondAttribute="trailing" id="2ky-8u-T5Y"/>
                 <constraint firstItem="ERp-5o-AOt" firstAttribute="top" secondItem="ghC-Va-Kcr" secondAttribute="bottom" constant="5" id="42g-75-CTC"/>
-                <constraint firstItem="A7m-yD-X8r" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="93g-bc-xYI"/>
-                <constraint firstAttribute="trailing" secondItem="A7m-yD-X8r" secondAttribute="trailing" constant="5" id="Wug-WS-DEg"/>
+                <constraint firstItem="ZRX-ue-SFT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="g9s-WZ-pr3"/>
                 <constraint firstItem="ghC-Va-Kcr" firstAttribute="top" secondItem="IN8-r7-j95" secondAttribute="bottom" constant="5" id="gEi-sd-k0W"/>
                 <constraint firstItem="IN8-r7-j95" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="gQq-80-qi0"/>
                 <constraint firstAttribute="trailing" secondItem="ghC-Va-Kcr" secondAttribute="trailing" constant="5" id="jeq-4S-fVY"/>
@@ -81,7 +82,13 @@
                 <constraint firstAttribute="bottom" secondItem="ERp-5o-AOt" secondAttribute="bottom" constant="10" id="tUc-01-Axo"/>
             </constraints>
             <size key="customSize" width="315" height="419"/>
-            <point key="canvasLocation" x="-98.5" y="41.5"/>
+            <connections>
+                <outlet property="citybtn" destination="ERp-5o-AOt" id="JGE-PE-UwR"/>
+                <outlet property="iconimageview" destination="IN8-r7-j95" id="NM5-3D-vIZ"/>
+                <outlet property="nicknamelabel" destination="ghC-Va-Kcr" id="Dmh-KC-D3k"/>
+                <outlet property="onlinebtn" destination="ZRX-ue-SFT" id="hmp-LZ-FOH"/>
+            </connections>
+            <point key="canvasLocation" x="649.5" y="63.5"/>
         </collectionViewCell>
     </objects>
     <resources>

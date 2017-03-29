@@ -14,7 +14,7 @@ enum methodtype{
 }
 
 class networktools {
-    class func requestdata(url:String,type:methodtype,parameters:[String:NSString]? = nil,completion:@escaping (_ result:Any)->()){
+    class func requestdata(url:String,type:methodtype,parameters:[String:String]? = nil,completion:@escaping (_ result:Any)->()){
         let method = type == methodtype.get ? HTTPMethod.get : HTTPMethod.post
         Alamofire.request(url, method: method, parameters: parameters).responseJSON { (response) in
             guard let result = response.result.value else{

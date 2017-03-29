@@ -44,6 +44,7 @@ class recommendViewController: UIViewController {
         
         collectionview.dataSource = self
         collectionview.delegate = self
+        
         collectionview.autoresizingMask = [.flexibleWidth,.flexibleHeight]
         //collectionview.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellid)
         //注册cell
@@ -67,7 +68,9 @@ extension recommendViewController{
 //发送网络请求
 extension recommendViewController{
         fileprivate func loaddata(){
-          recommendvm.requestdata()
+            recommendvm.requestdata {
+                self.collectionvieww.reloadData()
+            }
         }
     }
     
@@ -75,26 +78,30 @@ extension recommendViewController{
 //遵守数据源协议UICollectionViewDataSource
 extension recommendViewController:UICollectionViewDataSource{
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 13
+        return recommendvm.anchorgroups.count
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if section == 0{
-            return 8
-        }
-        return 4
+        let group = recommendvm.anchorgroups[section]
+        return group.anchors.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        var cell:UICollectionViewCell!
-        if indexPath.section == 2 {
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: prittycellid, for: indexPath)
+        //取出模型
+        if indexPath.section == 1 {
+          let cell = collectionView.dequeueReusableCell(withReuseIdentifier: prittycellid, for: indexPath) as! CollectionprettyCell
+            cell.anchor = recommendvm.anchorgroups[indexPath.section].anchors[indexPath.item]
+            return cell
         }else{
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: normalcellid, for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: normalcellid, for: indexPath) as! collectionnormalcell
+            cell.anchor = recommendvm.anchorgroups[indexPath.section].anchors[indexPath.item]
+            return cell
         }
         
-        return cell
+        
     }
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let headerview = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerid, for: indexPath)
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView  {
+        let headerview = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerid, for: indexPath) as! CollectionheaderView
+        headerview.group = recommendvm.anchorgroups[indexPath.section]
+    
        return headerview
     
    }
@@ -103,7 +110,7 @@ extension recommendViewController:UICollectionViewDataSource{
 extension recommendViewController:UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
-        if indexPath.section == 2{
+        if indexPath.section == 1{
             return CGSize(width: kitemw, height: kprittyitemh)
         }else{
             return CGSize(width: kitemw, height: knormalitemh)

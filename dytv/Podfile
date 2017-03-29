@@ -3,6 +3,7 @@
 
 target 'dytv' do
   pod 'Alamofire'
+  pod 'Kingfisher'
   use_frameworks!
 
 
