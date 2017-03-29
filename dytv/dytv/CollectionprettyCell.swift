@@ -9,36 +9,14 @@
 import UIKit
 import Kingfisher
 
-class CollectionprettyCell: UICollectionViewCell {
-    
-    @IBOutlet weak var iconimageview: UIImageView!
-    @IBOutlet weak var nicknamelabel: UILabel!
+class CollectionprettyCell: uicollectionbaseviewcell {
     @IBOutlet weak var citybtn: UIButton!
-    @IBOutlet weak var onlinebtn: UIButton!
- 
-    var anchor:anchormodel?{
+   override var anchor:anchormodel?{
         didSet{
-            //校验anchor是否有值
-            guard let anchor = anchor else {
-                return
-            }
-            //取出在线人数
-            let onlineperson:String?
-            if anchor.online > 10000{
-                onlineperson = "\(anchor.online/10000)万人在线"
-            }else{
-                onlineperson = "\(anchor.online)人在线"
-            }
-            onlinebtn.setTitle(onlineperson, for: .normal)
-            //主播名字
-            nicknamelabel.text = anchor.nickname
+            super.anchor = anchor
             //城市
-            citybtn.setTitle(anchor.anchor_city, for: .normal)
-            //设置封面
-            guard let iconurl = URL(string: anchor.vertical_src) else{
-                return
-            }
-            iconimageview.kf.setImage(with: iconurl)
+            citybtn.setTitle(anchor?.anchor_city, for: .normal)
+            
         }
     }
   

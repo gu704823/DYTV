@@ -36,6 +36,9 @@
 		960C35E21E87F72800EE3DE4 /* recommendviewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960C35E11E87F72800EE3DE4 /* recommendviewmodel.swift */; };
 		96B7DFE51E8402B3009F35AE /* pagetitleview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B7DFE41E8402B3009F35AE /* pagetitleview.swift */; };
 		96B7DFE71E84050C009F35AE /* common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B7DFE61E84050C009F35AE /* common.swift */; };
+		96D2350A1E8BFB84003C6127 /* uicollectionbaseview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D235091E8BFB84003C6127 /* uicollectionbaseview.swift */; };
+		96D2350C1E8C0200003C6127 /* recommendcycleview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D2350B1E8C0200003C6127 /* recommendcycleview.swift */; };
+		96D2350E1E8C0286003C6127 /* recommendcycleview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96D2350D1E8C0286003C6127 /* recommendcycleview.xib */; };
 		96E7EBC71E86973C002B9A92 /* liveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E7EBC61E86973C002B9A92 /* liveViewController.swift */; };
 		96E7EBC91E869BC6002B9A92 /* recommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E7EBC81E869BC6002B9A92 /* recommendViewController.swift */; };
 /* End PBXBuildFile section */
@@ -95,6 +98,9 @@
 		960C35E11E87F72800EE3DE4 /* recommendviewmodel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = recommendviewmodel.swift; sourceTree = "<group>"; };
 		96B7DFE41E8402B3009F35AE /* pagetitleview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pagetitleview.swift; sourceTree = "<group>"; };
 		96B7DFE61E84050C009F35AE /* common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = common.swift; sourceTree = "<group>"; };
+		96D235091E8BFB84003C6127 /* uicollectionbaseview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = uicollectionbaseview.swift; sourceTree = "<group>"; };
+		96D2350B1E8C0200003C6127 /* recommendcycleview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = recommendcycleview.swift; sourceTree = "<group>"; };
+		96D2350D1E8C0286003C6127 /* recommendcycleview.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = recommendcycleview.xib; sourceTree = "<group>"; };
 		96E7EBC61E86973C002B9A92 /* liveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = liveViewController.swift; sourceTree = "<group>"; };
 		96E7EBC81E869BC6002B9A92 /* recommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = recommendViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -265,6 +271,8 @@
 			children = (
 				960C35D01E8749DE00EE3DE4 /* CollectionheaderView.swift */,
 				960C35D11E8749DE00EE3DE4 /* CollectionheaderView.xib */,
+				96D2350B1E8C0200003C6127 /* recommendcycleview.swift */,
+				96D2350D1E8C0286003C6127 /* recommendcycleview.xib */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -289,6 +297,7 @@
 		43E31C011E83C29C00C8983C /* view */ = {
 			isa = PBXGroup;
 			children = (
+				96D235091E8BFB84003C6127 /* uicollectionbaseview.swift */,
 				96B7DFE41E8402B3009F35AE /* pagetitleview.swift */,
 				436CA9DE1E84A67B000E3892 /* pagecontentview.swift */,
 				960C35D61E874E7800EE3DE4 /* collectionnormalcell.swift */,
@@ -529,6 +538,7 @@
 				960C35DD1E87566E00EE3DE4 /* CollectionprettyCell.xib in Resources */,
 				43E31BB81E8383D800C8983C /* Assets.xcassets in Resources */,
 				43E31BF31E83BB6000C8983C /* live.storyboard in Resources */,
+				96D2350E1E8C0286003C6127 /* recommendcycleview.xib in Resources */,
 				960C35D91E874E7800EE3DE4 /* collectionnormalcell.xib in Resources */,
 				43E31BF51E83BB7900C8983C /* follow.storyboard in Resources */,
 				43E31BB61E8383D800C8983C /* Main.storyboard in Resources */,
@@ -605,6 +615,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96D2350C1E8C0200003C6127 /* recommendcycleview.swift in Sources */,
+				96D2350A1E8BFB84003C6127 /* uicollectionbaseview.swift in Sources */,
 				43E31BB11E8383D800C8983C /* AppDelegate.swift in Sources */,
 				960C35D21E8749DE00EE3DE4 /* CollectionheaderView.swift in Sources */,
 				43E31C0D1E83C38D00C8983C /* homeViewController.swift in Sources */,

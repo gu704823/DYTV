@@ -114,6 +114,9 @@ extension pagetitleview{
     @objc fileprivate func titlelabelclick(tapges:UITapGestureRecognizer){
     //1.获取当前的label.点击的label
         guard let currentlabel  = tapges.view as? UILabel else {return}
+        if currentlabel.tag == currentindex{
+            return
+        }
     //2.获取之前的label
         let oldlabel = labeltitles[currentindex]
         //3.设置当前label和之前label的字体颜色

@@ -13,6 +13,7 @@ private let kitemw = (kscreenw - 3 * kitemmargin)/2
 private let knormalitemh = 3/4 * kitemw
 private let kprittyitemh = 4/3 * kitemw
 private let kheaderviewh:CGFloat = 50
+private let cycleviewh = 3/8 * kscreenw
 private let normalcellid = "normalcellid"
 private let prittycellid = "prittycellid"
 private let headerid = "headerid"
@@ -27,8 +28,9 @@ class recommendViewController: UIViewController {
       //2.发送网络请求
         loaddata()
     }
-    //懒加载collectionview
+    //懒加载recommendviewmodel
     fileprivate lazy var recommendvm:recommendviewmodel = recommendviewmodel()
+    //懒加载collectionview
     fileprivate lazy var collectionvieww:UICollectionView = {
       //1.创建布局
         let layout = UICollectionViewFlowLayout()
@@ -56,13 +58,20 @@ class recommendViewController: UIViewController {
         return collectionview
     
     }()
+    //懒加载recommendcycleview(轮播)
+    fileprivate lazy var recommendcyclevieww:recommendcycleview = {
+        let cycleview = recommendcycleview.recommendcyclevieww()
+        cycleview.frame = CGRect(x: 0, y: -cycleviewh, width: kscreenw, height: cycleviewh)
+        return cycleview
+    }()
 }
 //设置ui界面内容
 extension recommendViewController{
     fileprivate func setupui(){
        //1.将collectionview添加到view中
         view.addSubview(collectionvieww)
-       
+        collectionvieww.addSubview(recommendcyclevieww)
+        collectionvieww.contentInset = UIEdgeInsets(top: cycleviewh, left: 0, bottom: 0, right: 0)
         }
     }
 //发送网络请求
@@ -86,16 +95,16 @@ extension recommendViewController:UICollectionViewDataSource{
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         //取出模型
+        let group = recommendvm.anchorgroups[indexPath.section]
+        let anchor = group.anchors[indexPath.item]
+        var cell:uicollectionbaseviewcell!
         if indexPath.section == 1 {
-          let cell = collectionView.dequeueReusableCell(withReuseIdentifier: prittycellid, for: indexPath) as! CollectionprettyCell
-            cell.anchor = recommendvm.anchorgroups[indexPath.section].anchors[indexPath.item]
-            return cell
+          cell = collectionView.dequeueReusableCell(withReuseIdentifier: prittycellid, for: indexPath) as! CollectionprettyCell
         }else{
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: normalcellid, for: indexPath) as! collectionnormalcell
-            cell.anchor = recommendvm.anchorgroups[indexPath.section].anchors[indexPath.item]
-            return cell
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: normalcellid, for: indexPath) as! collectionnormalcell
         }
-        
+        cell.anchor = anchor
+        return cell
         
     }
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView  {

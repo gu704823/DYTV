@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class CollectionheaderView: UICollectionReusableView {
 
@@ -14,8 +15,15 @@ class CollectionheaderView: UICollectionReusableView {
     @IBOutlet weak var iconimageview: UIImageView!
     var group:anchorgroup?{
         didSet{
-            titlelabel.text = group?.tag_name
-            iconimageview.image = UIImage(named:group?.icon_url ?? "")
+            guard  let group = group else {
+                return
+            }
+            titlelabel.text = group.tag_name
+            guard let url = URL(string: group.icon_url)  else {
+                iconimageview.image = UIImage(named: "home_header_hot")
+                return
+            }
+            iconimageview.kf.setImage(with: url)
         }
     }
     override func awakeFromNib() {
