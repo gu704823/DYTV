@@ -41,6 +41,9 @@
 		96D2350E1E8C0286003C6127 /* recommendcycleview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96D2350D1E8C0286003C6127 /* recommendcycleview.xib */; };
 		96E7EBC71E86973C002B9A92 /* liveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E7EBC61E86973C002B9A92 /* liveViewController.swift */; };
 		96E7EBC91E869BC6002B9A92 /* recommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E7EBC81E869BC6002B9A92 /* recommendViewController.swift */; };
+		96EBA90D1E8D3E8100021C72 /* cyclemodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EBA90C1E8D3E8100021C72 /* cyclemodel.swift */; };
+		96EBA9101E8D526200021C72 /* CollectionViewcycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EBA90E1E8D526200021C72 /* CollectionViewcycleCell.swift */; };
+		96EBA9111E8D526200021C72 /* CollectionViewcycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96EBA90F1E8D526200021C72 /* CollectionViewcycleCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +106,9 @@
 		96D2350D1E8C0286003C6127 /* recommendcycleview.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = recommendcycleview.xib; sourceTree = "<group>"; };
 		96E7EBC61E86973C002B9A92 /* liveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = liveViewController.swift; sourceTree = "<group>"; };
 		96E7EBC81E869BC6002B9A92 /* recommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = recommendViewController.swift; sourceTree = "<group>"; };
+		96EBA90C1E8D3E8100021C72 /* cyclemodel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cyclemodel.swift; sourceTree = "<group>"; };
+		96EBA90E1E8D526200021C72 /* CollectionViewcycleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewcycleCell.swift; sourceTree = "<group>"; };
+		96EBA90F1E8D526200021C72 /* CollectionViewcycleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewcycleCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +268,7 @@
 			children = (
 				437544EE1E88DC810029AFDE /* anchorgroup.swift */,
 				437544F01E8910F50029AFDE /* anchormodel.swift */,
+				96EBA90C1E8D3E8100021C72 /* cyclemodel.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -273,6 +280,8 @@
 				960C35D11E8749DE00EE3DE4 /* CollectionheaderView.xib */,
 				96D2350B1E8C0200003C6127 /* recommendcycleview.swift */,
 				96D2350D1E8C0286003C6127 /* recommendcycleview.xib */,
+				96EBA90E1E8D526200021C72 /* CollectionViewcycleCell.swift */,
+				96EBA90F1E8D526200021C72 /* CollectionViewcycleCell.xib */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -535,6 +544,7 @@
 				43E31BF81E83BB8C00C8983C /* profile.storyboard in Resources */,
 				960C35D31E8749DE00EE3DE4 /* CollectionheaderView.xib in Resources */,
 				43E31BBB1E8383D800C8983C /* LaunchScreen.storyboard in Resources */,
+				96EBA9111E8D526200021C72 /* CollectionViewcycleCell.xib in Resources */,
 				960C35DD1E87566E00EE3DE4 /* CollectionprettyCell.xib in Resources */,
 				43E31BB81E8383D800C8983C /* Assets.xcassets in Resources */,
 				43E31BF31E83BB6000C8983C /* live.storyboard in Resources */,
@@ -616,9 +626,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				96D2350C1E8C0200003C6127 /* recommendcycleview.swift in Sources */,
+				96EBA90D1E8D3E8100021C72 /* cyclemodel.swift in Sources */,
 				96D2350A1E8BFB84003C6127 /* uicollectionbaseview.swift in Sources */,
 				43E31BB11E8383D800C8983C /* AppDelegate.swift in Sources */,
 				960C35D21E8749DE00EE3DE4 /* CollectionheaderView.swift in Sources */,
+				96EBA9101E8D526200021C72 /* CollectionViewcycleCell.swift in Sources */,
 				43E31C0D1E83C38D00C8983C /* homeViewController.swift in Sources */,
 				96B7DFE71E84050C009F35AE /* common.swift in Sources */,
 				437544EF1E88DC810029AFDE /* anchorgroup.swift in Sources */,

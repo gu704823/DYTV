@@ -11,10 +11,12 @@ import UIKit
 class recommendviewmodel {
 //属性
     lazy var anchorgroups:[anchorgroup] = [anchorgroup]()
+    lazy var cyclemodels:[cyclemoedel] = [cyclemoedel]()
     fileprivate let prittygroup = anchorgroup()
     fileprivate let hotgroup = anchorgroup()
 }
 extension recommendviewmodel{
+    // 请求推荐数据
     func requestdata(completion:@escaping ()->()){
         let parameters = ["limit":"4","offset":"0","date":NSDate.getcurrenttime()]
         let disgroup = DispatchGroup()
@@ -38,6 +40,7 @@ extension recommendviewmodel{
         disgroup.enter()
         //3.请求颜值数据
         networktools.requestdata(url: "https://capi.douyucdn.cn/api/v1/getVerticalRoom", type: .get,parameters: parameters) { (result) in
+            
             guard let resultdict = result as? [String:NSObject] else {return}
             guard let dataarry = resultdict["data"] as?[[String:NSObject]] else {return}
             self.prittygroup.tag_name = "颜值"
@@ -65,11 +68,30 @@ extension recommendviewmodel{
         completion()
         }
  }
+    //请求轮播数据
+    func requestcycledata(complection:@escaping()->()){
+        networktools.requestdata(url: "https://capi.douyucdn.cn/api/v1/slide/6", type: .get, parameters: ["version" : "2.461"]) { (result) in
+            
+            guard let resultdict = result as? [String:NSObject] else{
+                return
+            }
+            guard let dataarry = resultdict["data"] as? [[String:NSObject]] else{
+                return
+            }
+            for dict in dataarry{
+                let data = cyclemoedel(dict: dict)
+                self.cyclemodels.append(data)
+            }
+           
+           complection()
+        }
+    }
 }
 
 
 //scrollview(6组数据)
 //https://capi.douyucdn.cn/api/v1/slide/6?version=2.461&client_sys=ios
+//https://capi.douyucdn.cn/api/v1/slide/6?version=2.461
 //最热
 //https://capi.douyucdn.cn/api/v1/getbigDataRoom?client_sys=ios
 

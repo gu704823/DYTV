@@ -23,14 +23,23 @@ class recommendViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
       //1.设置ui
         setupui()
-      //2.发送网络请求
+      //2.发送网络请求(推荐)
         loaddata()
+        //3.发送网络请求(轮播)
+        loadcycledata()
     }
-    //懒加载recommendviewmodel
+    //懒加载recommendviewmodel(数据)
     fileprivate lazy var recommendvm:recommendviewmodel = recommendviewmodel()
-    //懒加载collectionview
+    //懒加载recommendcycleview(轮播)
+    fileprivate lazy var recommendcyclevieww:recommendcycleview = {
+        let cycleview = recommendcycleview.recommendcyclevieww()
+        cycleview.frame = CGRect(x: 0, y: -cycleviewh, width: kscreenw, height: cycleviewh)
+        return cycleview
+    }()
+    //懒加载collectionview(推荐)
     fileprivate lazy var collectionvieww:UICollectionView = {
       //1.创建布局
         let layout = UICollectionViewFlowLayout()
@@ -58,12 +67,7 @@ class recommendViewController: UIViewController {
         return collectionview
     
     }()
-    //懒加载recommendcycleview(轮播)
-    fileprivate lazy var recommendcyclevieww:recommendcycleview = {
-        let cycleview = recommendcycleview.recommendcyclevieww()
-        cycleview.frame = CGRect(x: 0, y: -cycleviewh, width: kscreenw, height: cycleviewh)
-        return cycleview
-    }()
+    
 }
 //设置ui界面内容
 extension recommendViewController{
@@ -76,11 +80,19 @@ extension recommendViewController{
     }
 //发送网络请求
 extension recommendViewController{
+    //推荐数据
         fileprivate func loaddata(){
             recommendvm.requestdata {
                 self.collectionvieww.reloadData()
             }
         }
+    //轮播数据
+    fileprivate func loadcycledata(){
+       recommendvm.requestcycledata { (result) in
+        self.recommendcyclevieww.cyclemodels = self.recommendvm.cyclemodels
+        
+        }
+    }
     }
     
 

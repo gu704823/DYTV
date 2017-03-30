@@ -20,7 +20,7 @@ class uicollectionbaseviewcell: UICollectionViewCell {
             //取出在线人数
             var onlinepeople:String = ""
             if anchor.online>10000{
-                onlinepeople = "\(anchor.online/10000)人在线"
+                onlinepeople = "\(anchor.online/10000)万人在线"
             }else{
                 onlinepeople = "\(anchor.online)人在线"
             }
