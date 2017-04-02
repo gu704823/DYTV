@@ -25,7 +25,8 @@ class homeViewController: UIViewController {
                 //确定所有的子控制器
         var childvcs = [UIViewController]()
         childvcs.append(recommendViewController())
-        for _ in 0...2{
+        childvcs.append(gameviewcontroller())
+        for _ in 0...1{
             let vc = UIViewController()
             
             childvcs.append(vc)
