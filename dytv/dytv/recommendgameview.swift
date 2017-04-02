@@ -12,6 +12,17 @@ class recommendgameview: UIView {
     @IBOutlet weak var collectionview: UICollectionView!
     
     fileprivate let gamecellid = "gamecellid"
+    var gamegroups:[anchorgroup]?{
+        didSet{
+            
+           
+            gamegroups?.remove(at: 0)
+            gamegroups?.remove(at: 0)
+            
+            
+            collectionview.reloadData()
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,6 +32,8 @@ class recommendgameview: UIView {
         collectionview.dataSource = self
         //注册cell
         collectionview.register(UICollectionViewCell.self, forCellWithReuseIdentifier: gamecellid)
+        let nib = UINib(nibName: "CollectionViewgameCell", bundle: nil)
+        collectionview.register(nib, forCellWithReuseIdentifier: gamecellid)
     }
    
     //对collectionview进行布局
@@ -31,6 +44,7 @@ class recommendgameview: UIView {
         layout.minimumInteritemSpacing = 0
         layout.scrollDirection = .horizontal
         collectionview.showsHorizontalScrollIndicator = false
+        collectionview.contentInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
         
     }
 
@@ -44,11 +58,12 @@ extension recommendgameview{
 //实现数据源代理
 extension recommendgameview:UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 12
+        return gamegroups?.count ?? 0
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: gamecellid, for: indexPath)
-        cell.backgroundColor = indexPath.item%2==0 ? UIColor.red:UIColor.cyan
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: gamecellid, for: indexPath) as! CollectionViewgameCell
+        let group = gamegroups?[indexPath.item]
+        cell.gamegroup = group
         return cell
     }
 }

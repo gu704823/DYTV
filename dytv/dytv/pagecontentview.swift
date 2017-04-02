@@ -30,7 +30,7 @@ class pagecontentview: UIView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+    //创建collectionview
     fileprivate lazy var collectionview:UICollectionView = {
         //创建layout
         let layout = UICollectionViewFlowLayout()

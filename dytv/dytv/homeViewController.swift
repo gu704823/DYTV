@@ -11,9 +11,9 @@ import UIKit
 class homeViewController: UIViewController {
     
     fileprivate lazy var pagetitlevieww:pagetitleview = {[weak self] in
-        let titleframe = CGRect(x: 0, y: kstatusbarh + knavigationh, width: kscreenw, height: 40)
-        let titles = ["推荐","手游","游戏","娱乐","趣玩",]
+        let titles = ["推荐","游戏","娱乐","趣玩",]
         
+        let titleframe = CGRect(x: 0, y: kstatusbarh + knavigationh, width: kscreenw, height: 40)
         let titleview = pagetitleview(frame: titleframe, titles: titles)
         titleview.backgroundColor = UIColor.white
         //遵循pagetitleview的代理
@@ -22,17 +22,17 @@ class homeViewController: UIViewController {
     }()
     
      fileprivate lazy var pagecontentvieww:pagecontentview = {[weak self] in
-        //确定内容的frame
-       let contentviewframe = CGRect(x: 0, y: kstatusbarh + knavigationh + 40, width: kscreenw, height: kscerrenh - kstatusbarh - knavigationh - 40 - 44)
-        //确定所有的子控制器
+                //确定所有的子控制器
         var childvcs = [UIViewController]()
         childvcs.append(recommendViewController())
-        for _ in 0...3{
+        for _ in 0...2{
             let vc = UIViewController()
-            vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
+            
             childvcs.append(vc)
         }
         
+        //确定内容的frame
+        let contentviewframe = CGRect(x: 0, y: kstatusbarh + knavigationh + 40, width: kscreenw, height: kscerrenh - kstatusbarh - knavigationh - 40 - 44)
        let contenview = pagecontentview(frame: contentviewframe, childcontrollers: childvcs, parentcontrolller: self!)
         //遵循代理
         contenview.delegate = self

@@ -29,6 +29,7 @@ class recommendViewController: UIViewController {
         setupui()
       //2.发送网络请求(推荐)
         loaddata()
+        loadgamedata()
         //3.发送网络请求(轮播)
         loadcycledata()
     }
@@ -98,6 +99,12 @@ extension recommendViewController{
                 self.collectionvieww.reloadData()
             }
         }
+    //中间的游戏数据
+    fileprivate func loadgamedata(){
+        recommendvm.requestdata {
+            self.recommendgamevieww.gamegroups = self.recommendvm.anchorgroups
+        }
+    }
     //轮播数据
     fileprivate func loadcycledata(){
        recommendvm.requestcycledata { (result) in

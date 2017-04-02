@@ -7,12 +7,24 @@
 //
 
 import UIKit
+import Kingfisher
 
 class CollectionViewgameCell: UICollectionViewCell {
 
+    @IBOutlet weak var gameimage: UIImageView!
+    @IBOutlet weak var gamename: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        gameimage.layer.cornerRadius = 25
+        gameimage.layer.masksToBounds = true
+    }
+    var gamegroup:anchorgroup?{
+        didSet{
+          
+            gamename.text = gamegroup?.tag_name
+            let url = URL(string: gamegroup?.icon_url ?? "")
+            gameimage.kf.setImage(with: url)
+        }
     }
 
 }
