@@ -14,6 +14,7 @@ private let knormalitemh = 3/4 * kitemw
 private let kprittyitemh = 4/3 * kitemw
 private let kheaderviewh:CGFloat = 50
 private let cycleviewh = 3/8 * kscreenw
+private let gameviewh:CGFloat = 90
 private let normalcellid = "normalcellid"
 private let prittycellid = "prittycellid"
 private let headerid = "headerid"
@@ -36,8 +37,15 @@ class recommendViewController: UIViewController {
     //懒加载recommendcycleview(轮播)
     fileprivate lazy var recommendcyclevieww:recommendcycleview = {
         let cycleview = recommendcycleview.recommendcyclevieww()
-        cycleview.frame = CGRect(x: 0, y: -cycleviewh, width: kscreenw, height: cycleviewh)
+        cycleview.frame = CGRect(x: 0, y: -(cycleviewh+gameviewh), width: kscreenw, height: cycleviewh)
         return cycleview
+    }()
+    //懒加载recommendgameview(游戏推荐)
+    fileprivate lazy var recommendgamevieww:recommendgameview = {
+       let gameview = recommendgameview.recommendgameview()
+        gameview.frame = CGRect(x: 0, y: -gameviewh, width: kscreenw, height: gameviewh)
+        return gameview
+    
     }()
     //懒加载collectionview(推荐)
     fileprivate lazy var collectionvieww:UICollectionView = {
@@ -74,8 +82,12 @@ extension recommendViewController{
     fileprivate func setupui(){
        //1.将collectionview添加到view中
         view.addSubview(collectionvieww)
+        //将游戏推荐界面添加到collectionview中
+        collectionvieww.addSubview(recommendgamevieww)
+        //将轮播界面添加到collectionview中
         collectionvieww.addSubview(recommendcyclevieww)
-        collectionvieww.contentInset = UIEdgeInsets(top: cycleviewh, left: 0, bottom: 0, right: 0)
+        
+        collectionvieww.contentInset = UIEdgeInsets(top: cycleviewh+gameviewh, left: 0, bottom: 0, right: 0)
         }
     }
 //发送网络请求
