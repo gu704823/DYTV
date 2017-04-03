@@ -17,6 +17,7 @@
 		437FD7191E90EE7900B032A8 /* recommendgameview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 437FD7181E90EE7900B032A8 /* recommendgameview.xib */; };
 		437FD71C1E90F97300B032A8 /* CollectionViewgameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437FD71A1E90F97300B032A8 /* CollectionViewgameCell.swift */; };
 		437FD71D1E90F97300B032A8 /* CollectionViewgameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 437FD71B1E90F97300B032A8 /* CollectionViewgameCell.xib */; };
+		439BE7DD1E91C6D4006AF7D2 /* gameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439BE7DC1E91C6D4006AF7D2 /* gameViewController.swift */; };
 		43E31BB11E8383D800C8983C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E31BB01E8383D800C8983C /* AppDelegate.swift */; };
 		43E31BB61E8383D800C8983C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E31BB41E8383D800C8983C /* Main.storyboard */; };
 		43E31BB81E8383D800C8983C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43E31BB71E8383D800C8983C /* Assets.xcassets */; };
@@ -38,7 +39,6 @@
 		960C35DD1E87566E00EE3DE4 /* CollectionprettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 960C35DB1E87566E00EE3DE4 /* CollectionprettyCell.xib */; };
 		960C35DF1E87E5D800EE3DE4 /* networktools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960C35DE1E87E5D800EE3DE4 /* networktools.swift */; };
 		960C35E21E87F72800EE3DE4 /* recommendviewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960C35E11E87F72800EE3DE4 /* recommendviewmodel.swift */; };
-		96996DD71E914B0D00F3F257 /* gameviewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96996DD61E914B0D00F3F257 /* gameviewcontroller.swift */; };
 		96B7DFE51E8402B3009F35AE /* pagetitleview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B7DFE41E8402B3009F35AE /* pagetitleview.swift */; };
 		96B7DFE71E84050C009F35AE /* common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B7DFE61E84050C009F35AE /* common.swift */; };
 		96D2350A1E8BFB84003C6127 /* uicollectionbaseview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D235091E8BFB84003C6127 /* uicollectionbaseview.swift */; };
@@ -79,6 +79,7 @@
 		437FD7181E90EE7900B032A8 /* recommendgameview.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = recommendgameview.xib; sourceTree = "<group>"; };
 		437FD71A1E90F97300B032A8 /* CollectionViewgameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewgameCell.swift; sourceTree = "<group>"; };
 		437FD71B1E90F97300B032A8 /* CollectionViewgameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewgameCell.xib; sourceTree = "<group>"; };
+		439BE7DC1E91C6D4006AF7D2 /* gameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gameViewController.swift; sourceTree = "<group>"; };
 		43E31BAD1E8383D800C8983C /* dytv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dytv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43E31BB01E8383D800C8983C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43E31BB51E8383D800C8983C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -108,7 +109,6 @@
 		960C35DB1E87566E00EE3DE4 /* CollectionprettyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionprettyCell.xib; sourceTree = "<group>"; };
 		960C35DE1E87E5D800EE3DE4 /* networktools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = networktools.swift; sourceTree = "<group>"; };
 		960C35E11E87F72800EE3DE4 /* recommendviewmodel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = recommendviewmodel.swift; sourceTree = "<group>"; };
-		96996DD61E914B0D00F3F257 /* gameviewcontroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gameviewcontroller.swift; sourceTree = "<group>"; };
 		96B7DFE41E8402B3009F35AE /* pagetitleview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pagetitleview.swift; sourceTree = "<group>"; };
 		96B7DFE61E84050C009F35AE /* common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = common.swift; sourceTree = "<group>"; };
 		96D235091E8BFB84003C6127 /* uicollectionbaseview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = uicollectionbaseview.swift; sourceTree = "<group>"; };
@@ -176,6 +176,16 @@
 				437FD71B1E90F97300B032A8 /* CollectionViewgameCell.xib */,
 			);
 			name = game;
+			sourceTree = "<group>";
+		};
+		439BE7DE1E91C7A9006AF7D2 /* 推荐 */ = {
+			isa = PBXGroup;
+			children = (
+				437FD71E1E90F98400B032A8 /* header */,
+				437FD71F1E90F99200B032A8 /* recommend */,
+				437FD7201E90F9C100B032A8 /* game */,
+			);
+			name = "推荐";
 			sourceTree = "<group>";
 		};
 		43E31BA41E8383D800C8983C = {
@@ -317,9 +327,7 @@
 		43E31BFE1E83C25300C8983C /* view */ = {
 			isa = PBXGroup;
 			children = (
-				437FD7201E90F9C100B032A8 /* game */,
-				437FD71F1E90F99200B032A8 /* recommend */,
-				437FD71E1E90F98400B032A8 /* header */,
+				439BE7DE1E91C7A9006AF7D2 /* 推荐 */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -470,7 +478,7 @@
 		96996DD51E914ADA00F3F257 /* 游戏 */ = {
 			isa = PBXGroup;
 			children = (
-				96996DD61E914B0D00F3F257 /* gameviewcontroller.swift */,
+				439BE7DC1E91C6D4006AF7D2 /* gameViewController.swift */,
 			);
 			name = "游戏";
 			sourceTree = "<group>";
@@ -685,6 +693,7 @@
 				437FD7171E90EDA200B032A8 /* recommendgameview.swift in Sources */,
 				96D2350C1E8C0200003C6127 /* recommendcycleview.swift in Sources */,
 				96EBA90D1E8D3E8100021C72 /* cyclemodel.swift in Sources */,
+				439BE7DD1E91C6D4006AF7D2 /* gameViewController.swift in Sources */,
 				96D2350A1E8BFB84003C6127 /* uicollectionbaseview.swift in Sources */,
 				43E31BB11E8383D800C8983C /* AppDelegate.swift in Sources */,
 				960C35D21E8749DE00EE3DE4 /* CollectionheaderView.swift in Sources */,
@@ -692,7 +701,6 @@
 				43E31C0D1E83C38D00C8983C /* homeViewController.swift in Sources */,
 				96B7DFE71E84050C009F35AE /* common.swift in Sources */,
 				437544EF1E88DC810029AFDE /* anchorgroup.swift in Sources */,
-				96996DD71E914B0D00F3F257 /* gameviewcontroller.swift in Sources */,
 				96E7EBC71E86973C002B9A92 /* liveViewController.swift in Sources */,
 				96B7DFE51E8402B3009F35AE /* pagetitleview.swift in Sources */,
 				437544F11E8910F50029AFDE /* anchormodel.swift in Sources */,

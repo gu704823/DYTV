@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LeanCloud
 
 class mainViewController: UITabBarController {
 
@@ -16,6 +17,14 @@ class mainViewController: UITabBarController {
         addchildviewcontroller(name: "live")
         addchildviewcontroller(name: "follow")
         addchildviewcontroller(name: "profile")
+        
+        
+        
+        
+        //测试leancloud
+        let post = LCObject(className: "testobject")
+        post.set("words", value: "helloword")
+        post.save()
       
         
     }

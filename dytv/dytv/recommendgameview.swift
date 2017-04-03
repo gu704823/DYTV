@@ -12,14 +12,12 @@ class recommendgameview: UIView {
     @IBOutlet weak var collectionview: UICollectionView!
     
     fileprivate let gamecellid = "gamecellid"
+    
     var gamegroups:[anchorgroup]?{
+        
         didSet{
-            
-           
+            gamegroups?.removeFirst()
             gamegroups?.remove(at: 0)
-            gamegroups?.remove(at: 0)
-            
-            
             collectionview.reloadData()
         }
     }
@@ -34,6 +32,7 @@ class recommendgameview: UIView {
         collectionview.register(UICollectionViewCell.self, forCellWithReuseIdentifier: gamecellid)
         let nib = UINib(nibName: "CollectionViewgameCell", bundle: nil)
         collectionview.register(nib, forCellWithReuseIdentifier: gamecellid)
+        
     }
    
     //对collectionview进行布局

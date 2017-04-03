@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LeanCloud
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        //切换leancloud的节点,默认中国
+        LeanCloud.setServiceRegion(.cn)
+        //注册leancloud
+        LeanCloud.initialize(applicationID: "VuAJiOQ8VN3afCHxDWdMdm3f-gzGzoHsz", applicationKey: "FQQrzhHuwYtlHjDN090T7NNk")
         //设置tabbar的颜色
         UITabBar.appearance().tintColor = UIColor.orange
         return true
